@@ -14,7 +14,7 @@ class TimeSlotAdapter(private val listener: TimeSlotInterface) : RecyclerView.Ad
     private val itemList = ArrayList<TimeSlot>()
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     private val dateFormat2 = SimpleDateFormat("dd-MM-yyyy")
-    private val dateFormat3 = SimpleDateFormat("hh:mm a")
+    private val dateFormat3 = SimpleDateFormat("HH:mm a")
     private var currentIndex = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -33,12 +33,15 @@ class TimeSlotAdapter(private val listener: TimeSlotInterface) : RecyclerView.Ad
         with(holder.viewBinding){
 //            ivDoctor.setImageResource(currentItem.image)
 //            tvSpeciality.text = currentItem.textSpeciality
-            tvDate.text = dateFormat2.format(date)
+//            tvDate.text = dateFormat2.format(date)
+//            tvTime.text = SimpleDateFormat("KK: mm a").format(date)
             tvTime.text = dateFormat3.format(date)
+
 
             if(currentIndex == position){
                 layout1.setBackgroundResource(R.drawable.booking_slot_selected)
             }else if(currentItem.remaining_limit > 0){
+
                 tvStatus.text = "Available"
                 layout1.setBackgroundResource(R.drawable.booking_slot_available)
             }else{

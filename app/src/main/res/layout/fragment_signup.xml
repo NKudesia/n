@@ -36,34 +36,27 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline1"
-        app:layout_constraintBottom_toTopOf="@id/guideline">
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageView
-            android:id="@+id/iv_logo"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginStart="30dp"
-            android:layout_marginBottom="5dp"
-            android:src="@drawable/healthgate_logo_signup"
-            app:layout_constraintBottom_toTopOf="@+id/guideline1"
-            app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/healthgate_logo_signup"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_main_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/blue_card_background">
+        android:background="@drawable/blue_card_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/guideline">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
@@ -161,14 +154,12 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:paddingStart="@dimen/_12sdp"
             android:paddingEnd="@dimen/_50sdp"
             app:layout_constraintDimensionRatio="5:1"
             android:background="@drawable/ic_textfield_bg"
             android:clickable="true"
             android:cursorVisible="false"
             android:dropDownHeight="wrap_content"
-            android:textSize="@dimen/_12sdp"
             android:hint="@string/nationality"
             android:textColorHint="#aab2b7"
             android:focusable="false"
@@ -187,64 +178,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_email"/>
 
-
-        <AutoCompleteTextView
-            android:id="@+id/ac_govt_source_id"
-            style="@style/EditTextViewStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:paddingStart="@dimen/_12sdp"
-            android:paddingEnd="@dimen/_50sdp"
-            app:layout_constraintDimensionRatio="5:1"
-            android:background="@drawable/ic_textfield_bg"
-            android:clickable="true"
-            android:cursorVisible="false"
-            android:dropDownHeight="wrap_content"
-            android:textSize="@dimen/_12sdp"
-            android:hint="@string/govt_source_id"
-            android:textColorHint="#aab2b7"
-            android:focusable="false"
-            android:inputType="none"
-            android:maxLines="1"
-            app:layout_constraintEnd_toStartOf="@id/guideline4"
-            app:layout_constraintStart_toStartOf="@id/guideline3"
-            app:layout_constraintTop_toBottomOf="@id/ac_nationality"/>
-
-        <ImageView
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/polygon"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:layout_marginEnd="@dimen/_40sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ac_nationality"/>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/et_govt_id"
-            style="@style/EditTextStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="@dimen/_24sdp"
-            android:layout_marginEnd="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintDimensionRatio="5:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ac_govt_source_id">
-
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/EditTextViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableTint="@color/black"
-                android:hint="@string/govt_id"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_password"
             style="@style/EditTextStyle"
@@ -256,7 +189,7 @@
             app:layout_constraintDimensionRatio="5:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_govt_id"
+            app:layout_constraintTop_toBottomOf="@id/ac_nationality"
             app:passwordToggleEnabled="true"
             tools:layout_editor_absoluteY="31dp">
 
@@ -382,8 +315,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_height="0dp"
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@id/layout1"
             app:layout_constraintBottom_toBottomOf="parent">
@@ -403,8 +335,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

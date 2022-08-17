@@ -77,7 +77,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(), ApiL
             }
 
         binding.tvTerms.setOnClickListener{
-
+//test
 //        val url = Intent(Intent.ACTION_VIEW)
 //            url.data = Uri.parse("https://healthgates.pulseiehr.com/terms?#")
 //            startActivity(url)

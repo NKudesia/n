@@ -33,11 +33,12 @@ import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
+import com.example.healthgates.R
+
 
 import androidx.core.content.FileProvider
 
 import android.os.Build
-import com.example.healthgates.R
 import com.example.healthgates.ui.interfaces.PopupListener
 import com.example.healthgates.utils.*
 
@@ -118,6 +119,7 @@ class LabTestsFragment : BaseFragment<FragmentLabTestsBinding, PatientViewModel>
 
     private fun updateUI(userDetails: UserDetails){
         binding.tvName.text = userDetails.name
+        binding.tvMrn.text = userDetails.code
         binding.ivProfile.loadImage(userDetails.image_1920)
     }
 
@@ -229,11 +231,28 @@ class LabTestsFragment : BaseFragment<FragmentLabTestsBinding, PatientViewModel>
         context.startActivity(pdfIntent)
     }
 
+//    override fun onSuccess(response: JSONObject) {
+//        Log.d(VolleyLog.TAG, "onSuccess: $response")
+//        if (response.has("result")) {
+//            if (response.get("result") is JSONArray) {
+//            val result = response.getJSONArray("result")
+//
+//                val type = object : TypeToken<ArrayList<LabTest>>() {}.type
+//
+//                list = Gson().fromJson(result.toString(), type)
+//
+//                labTestAdapter.updateList(list)
+//            }
+//        } else {
+//            Log.d(VolleyLog.TAG, "Error: ${response.getJSONObject("error").getString("message")}")
+//        }
+//    }
+
     override fun onSuccess(response: JSONObject) {
         Log.d(VolleyLog.TAG, "onSuccess: $response")
         if (response.has("result")) {
             if (response.get("result") is JSONArray) {
-            val result = response.getJSONArray("result")
+                val result = response.getJSONArray("result")
 
                 val type = object : TypeToken<ArrayList<LabTest>>() {}.type
 
@@ -251,7 +270,6 @@ class LabTestsFragment : BaseFragment<FragmentLabTestsBinding, PatientViewModel>
             Log.d(VolleyLog.TAG, "Error: ${response.getJSONObject("error").getString("message")}")
         }
     }
-
     override fun onFailure(error: VolleyError) {
         Log.d(VolleyLog.TAG, "Error ${error.message}")
 //        binding.root.snackbar("Something went wrong! ${error.message}")

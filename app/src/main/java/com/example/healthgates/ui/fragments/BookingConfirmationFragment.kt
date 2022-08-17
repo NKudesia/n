@@ -26,7 +26,7 @@ class BookingConfirmationFragment : BaseFragment<FragmentSignupComplimenteryBind
         selectedDate = viewModel.getSelectedDate()!!
         selectedTime = viewModel.getSelectedTime()!!
 
-        binding.tvSigupComplimentery.text = "Thank You for booking appointment on " + selectedDate + selectedTime + " with " + selectedDoctor.name
+        binding.tvSigupComplimentery.text = "Thank You for booking appointment on " + selectedDate + " at " + selectedTime + " with " + selectedDoctor.name
 
     }
 

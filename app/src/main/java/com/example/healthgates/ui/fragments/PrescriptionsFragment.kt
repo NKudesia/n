@@ -119,6 +119,7 @@ class PrescriptionsFragment : BaseFragment<FragmentLabTestsBinding, PatientViewM
 
     private fun updateUI(userDetails: UserDetails){
         binding.tvName.text = userDetails.name
+        binding.tvMrn.text = userDetails.code
         binding.ivProfile.loadImage(userDetails.image_1920)
     }
 

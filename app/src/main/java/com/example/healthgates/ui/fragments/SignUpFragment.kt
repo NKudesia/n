@@ -5,17 +5,16 @@ import android.content.ContentValues
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.net.Uri
-import android.text.InputFilter
-import android.text.InputFilter.LengthFilter
 import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.view.size
 import androidx.lifecycle.lifecycleScope
 import com.android.volley.*
 import com.android.volley.error.AuthFailureError
@@ -24,7 +23,6 @@ import com.android.volley.request.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.healthgates.R
 import com.example.healthgates.data.config.AppConfig
-import com.example.healthgates.data.models.GovtSourceId
 import com.example.healthgates.data.models.User
 import com.example.healthgates.databinding.DialogLoadingProgressBinding
 import com.example.healthgates.databinding.FragmentSignupBinding
@@ -35,15 +33,11 @@ import com.example.healthgates.ui.interfaces.ApiListener
 import com.example.healthgates.ui.viewmodel.LoginViewModel
 import com.example.healthgates.utils.*
 import com.google.android.material.radiobutton.MaterialRadioButton
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
-
-
 //import org.webrtc.ContextUtils.getApplicationContext
 
 
@@ -52,10 +46,6 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding, LoginViewModel>(), Ap
     private lateinit var loadingDialog: Dialog
     var countryArrayList = ArrayList<String>()
     private lateinit var countryResult: JSONArray
-    var govtSourceIdList = ArrayList<String>()
-    var govtSourceIdList2 = ArrayList<GovtSourceId>()
-    private lateinit var govtSourceIdResult: JSONArray
-    var govtSourceId : GovtSourceId? = null
     lateinit var radioButton: MaterialRadioButton
     var country_id = ""
     var gender = ""
@@ -96,45 +86,18 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding, LoginViewModel>(), Ap
 //        }
 
         binding.acNationality.setOnClickListener{
-//            if(countryArrayList.isEmpty()) {
-                getCountry()
-//            }
+            getCountry()
             binding.acNationality.showDropDown()
         }
 
         binding.acNationality.onItemClickListener = AdapterView.OnItemClickListener{
                 parent, view, position, id ->
-
             getCountry()
-//            binding.acNationality.showDropDown()
+            binding.acNationality.showDropDown()
             getCountryId(position)
             selection = parent.getItemAtPosition(position) as String
-//            binding.acNationality.setText("    " + parent.getItemAtPosition(position))
-            binding.acNationality.setText("" + parent.getItemAtPosition(position))
+            binding.acNationality.setText("    " + parent.getItemAtPosition(position))
             Log.d(TAG, "setupClickListeners: "+ getCountryId(position))
-        }
-
-        binding.etGovtId.editText?.setFilters(arrayOf<InputFilter>(LengthFilter(govtSourceId?.length ?: 0)))
-
-        binding.acGovtSourceId.setOnClickListener{
-//          if(govtSourceIdList.isEmpty()) {
-                getGovtSourceId()
-//            }
-            binding.acGovtSourceId.showDropDown()
-        }
-
-        binding.acGovtSourceId.onItemClickListener = AdapterView.OnItemClickListener{
-                parent, view, position, id ->
-//            binding.acGovtSourceId.showDropDown()
-//            getCountryId(position)
-            getGovtSourceId()
-            govtSourceId = govtSourceIdList2.get(position)
-            selection = parent.getItemAtPosition(position) as String
-            binding.acGovtSourceId.setText("" + parent.getItemAtPosition(position))
-//            Log.d(TAG, "setupClickListeners: "+ getCountryId(position))
-
-            binding.etGovtId.editText?.setText("")
-            binding.etGovtId.editText?.setFilters(arrayOf<InputFilter>(LengthFilter(govtSourceId?.length ?: 0)))
         }
 
         binding.submitBtn.setOnClickListener { checkEmailandPassword()}
@@ -178,17 +141,6 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding, LoginViewModel>(), Ap
         }
         binding.etEmail.isErrorEnabled = false
 
-        if (binding.etGovtId.editText?.text.toString().isEmpty()) {
-            binding.etGovtId.showErrorOnEditText("* Required")
-            return
-        }
-
-        if(binding.etGovtId.editText?.length() != govtSourceId?.length ?: 0){
-            binding.etGovtId.showErrorOnEditText("Govt id is incorrect")
-            Popup(requireContext(),requireView(), "Govt id is incorrect")
-            return
-        }
-
         if (binding.etPassword.editText?.text.toString().isEmpty()) {
             binding.etPassword.showErrorOnEditText("* Required")
             return
@@ -212,6 +164,7 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding, LoginViewModel>(), Ap
             gender = "female"
         }
 
+
         signUp()
     }
 
@@ -221,8 +174,6 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding, LoginViewModel>(), Ap
             name = binding.etName.editText?.text.toString(),
             mobile = binding.etMobileNum.editText?.text.toString(),
             nationality = country_id,
-            gov_source_id = ""+(govtSourceId?.id ?: 0),
-            government_id = binding.etGovtId.editText?.text.toString(),
             gender = gender,
             password = binding.etPassword.editText?.text.toString())
         Log.d(TAG, "signUp: "+ country_id + gender)
@@ -246,7 +197,7 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding, LoginViewModel>(), Ap
 
 
         val stringRequest = object : StringRequest(
-            Request.Method.POST, AppConfig.NATIONALITY,
+            Request.Method.POST, "https://healthgates.pulseiehr.com/api/nationality",
             Response.Listener<String?> { response ->
                 var j: JSONObject?
                 try {
@@ -325,100 +276,6 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding, LoginViewModel>(), Ap
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-    }
-
-
-    private fun getGovtSourceId() {
-
-        val paramsObject = JSONObject()
-        with(paramsObject) {
-        }
-        val jsonObject = JSONObject()
-        with(jsonObject){
-            put("jsonrpc", AppConfig.JSON_RPC)
-            put("method", AppConfig.METHOD)
-            put("params", paramsObject)
-            put("id", "505136376")
-        }
-
-        val stringRequest = object : StringRequest(
-            Request.Method.POST, AppConfig.GOVT_SOURCE_ID,
-            Response.Listener<String?> { response ->
-                var j: JSONObject?
-                try {
-                    j = JSONObject(response)
-
-                    govtSourceIdResult = j.getJSONArray("result")
-                    //Fetch Country List
-                    govtSourceIdDetails(govtSourceIdResult)
-
-                } catch (e: JSONException) {
-                    e.printStackTrace()
-                }
-            },
-            Response.ErrorListener { error ->
-                Toast.makeText(
-                    requireContext(),
-                    "" + error,
-                    Toast.LENGTH_LONG
-                ).show()
-            })
-        {
-
-            @Throws(AuthFailureError::class)
-            override fun getBody(): ByteArray {
-                return jsonObject.toString().toByteArray()
-            }
-
-            override fun getBodyContentType(): String {
-                return "application/json"
-            }
-//            override fun getHeaders(): MutableMap<String, String> {
-//                val params: MutableMap<String, String> = HashMap()
-//                params["Accept"] = "application/json"
-//                return params
-//            }
-        }
-        val requestQueue = Volley.newRequestQueue(requireContext())
-        val socketTimeout = 30000
-        val policy: RetryPolicy = DefaultRetryPolicy(
-            socketTimeout,
-            DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-            DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
-        )
-        stringRequest.retryPolicy = policy
-//        requestQueue.add(stringRequest)
-        VolleySingleton.getInstance(MyApplication.getAppContext()).addToRequestQueue(stringRequest)
-    }
-
-
-    private fun govtSourceIdDetails(result: JSONArray) {
-
-        val type = object : TypeToken<ArrayList<GovtSourceId>>() {}.type
-        govtSourceIdList2 = Gson().fromJson(result.toString(), type)
-
-        govtSourceIdList = ArrayList()
-        for (i in 0..result!!.length() - 1) {
-            try {
-                val json = result.getJSONObject(i)
-                govtSourceIdList.add(json.getString("name"))
-            } catch (e: JSONException) {
-                e.printStackTrace()
-            }
-        }
-        binding.acGovtSourceId.setAdapter<ArrayAdapter<String>>(
-            ArrayAdapter(
-                requireContext(),
-                android.R.layout.simple_spinner_dropdown_item,
-                govtSourceIdList
-            )
-        )
-    }
-
-    override fun onResume() {
-        super.onResume()
-        getCountry()
-        getGovtSourceId()
     }
 
     override fun onSuccess(response: JSONObject) {

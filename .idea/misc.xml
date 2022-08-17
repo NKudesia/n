@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/adapter_appointment.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/adapter_appointment_detail.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/adapter_lab_test.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_appointment_details.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_appointments.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_book_appointment_date.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_book_appointment_time.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_branches.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_doctor.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_login.xml" value="0.22" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_prescriptions.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_privacy_policy.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_rad_results.xml" value="0.1453804347826087" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_reset_link.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_signup.xml" value="0.22" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_signup_complimentery.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/fragment_view_doctors.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/layout_popup.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/Projects/HealthGates/app/src/main/res/layout/layout_popup_two.xml" value="0.17" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/health-gates/app/src/main/res/drawable/ic_texfield_error_bg.xml" value="0.17962962962962964" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/health-gates/app/src/main/res/drawable/ic_textfield_bg.xml" value="0.17962962962962964" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/health-gates/app/src/main/res/layout/fragment_home.xml" value="0.13703703703703704" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/health-gates/app/src/main/res/layout/fragment_signup.xml" value="0.14444444444444443" />
+        <entry key="app/src/main/res/drawable/bottom_nav_bar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/activity_webview.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/adapter_appointment.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/adapter_appointment_detail.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/adapter_branch.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/adapter_doctor.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/adapter_doctor_two.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/adapter_home.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/adapter_lab_test.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/adapter_profile.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/adapter_time_slot.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/fragment_appointment_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_appointments.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_book_appointment_date.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/fragment_book_appointment_time.xml" value="0.31902313232421875" />
+        <entry key="app/src/main/res/layout/fragment_branches.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/fragment_doctor.xml" value="0.307928466796875" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/fragment_incoming_invitation.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/fragment_lab_tests.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.366439111681952" />
+        <entry key="app/src/main/res/layout/fragment_map.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_signup_failed.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/fragment_video_chat.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/fragment_view_doctors.xml" value="0.17346014492753623" />
+        <entry key="app/src/main/res/layout/layout_popup_two.xml" value="0.31875" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.366439111681952" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

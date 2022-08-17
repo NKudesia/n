@@ -101,6 +101,7 @@ class RadResultsFragment : BaseFragment<FragmentLabTestsBinding, PatientViewMode
 
     private fun updateUI(userDetails: UserDetails){
         binding.tvName.text = userDetails.name
+        binding.tvMrn.text = userDetails.code
         binding.ivProfile.loadImage(userDetails.image_1920)
     }
 
@@ -185,6 +186,24 @@ class RadResultsFragment : BaseFragment<FragmentLabTestsBinding, PatientViewMode
         val viewerIntent = Intent.createChooser(pdfIntent, "Open PDF")
         context.startActivity(viewerIntent)
     }
+
+//    override fun onSuccess(response: JSONObject) {
+//        Log.d(VolleyLog.TAG, "onSuccess: $response")
+//        if (response.has("result")) {
+//            if (response.get("result") is JSONArray) {
+//                val result = response.getJSONArray("result")
+//
+//                val type = object : TypeToken<ArrayList<LabTest>>() {}.type
+//
+//                list = Gson().fromJson(result.toString(), type)
+//
+//                labTestAdapter.updateList(list)
+//            }
+//        } else {
+//            Log.d(VolleyLog.TAG, "Error: ${response.getJSONObject("error").getString("message")}")
+//        }
+//    }
+
 
     override fun onSuccess(response: JSONObject) {
         Log.d(VolleyLog.TAG, "onSuccess: $response")

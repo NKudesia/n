@@ -88,8 +88,10 @@ class AppointmentsFragment : BaseFragment<FragmentAppointmentsBinding, PatientVi
 
     private fun updateUI(userDetails: UserDetails){
         binding.tvName.text = userDetails.name
+        binding.tvMrn.text = userDetails.code
         binding.ivProfile.loadImage(userDetails.image_1920)
     }
+
 
     override fun onSuccess(response: JSONObject) {
         Log.d(VolleyLog.TAG, "onSuccess: $response")
@@ -115,6 +117,24 @@ class AppointmentsFragment : BaseFragment<FragmentAppointmentsBinding, PatientVi
             Log.d(VolleyLog.TAG, "Error: ${response.getJSONObject("error").getString("message")}")
         }
     }
+
+//    override fun onSuccess(response: JSONObject) {
+//        Log.d(VolleyLog.TAG, "onSuccess: $response")
+//        if (response.has("result")) {
+//            if (response.get("result") is JSONArray) {
+//                val result = response.getJSONArray("result")
+////            val records = result.getJSONArray("records")
+//                val type = object : TypeToken<ArrayList<Appointment>>() {}.type
+//
+//                list = Gson().fromJson(result.toString(), type)
+//
+//                appointmentAdapter.updateList(list)
+//
+//            }
+//        } else {
+//            Log.d(VolleyLog.TAG, "Error: ${response.getJSONObject("error").getString("message")}")
+//        }
+//    }
 
     override fun onFailure(error: VolleyError) {
         Log.d(VolleyLog.TAG, "Error ${error.message}")

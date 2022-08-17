@@ -12,8 +12,6 @@ class AppConfig {
         const val AGORA_APP_ID = "e6e27f6339e143f2b9450f8b1d53edf8"
         const val LOGIN_URL = SERVER_BASE_URL + "web/session/authenticate"
         const val SIGNUP_URL = SERVER_BASE_URL + "api/signup"
-        const val NATIONALITY = SERVER_BASE_URL + "api/nationality"
-        const val GOVT_SOURCE_ID = SERVER_BASE_URL + "api/gov/source"
         const val RESET_PASSWORD_URL = SERVER_BASE_URL + "api/reset/password"
         const val SEARCH_LIMIT = 80
         const val PATIENT_DETIALS_URL = SERVER_BASE_URL + "api/get/patient/details"
