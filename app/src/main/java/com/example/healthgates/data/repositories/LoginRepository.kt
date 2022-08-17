@@ -58,6 +58,8 @@ class LoginRepository {
             put("name", user.name)
             put("mobile", user.mobile)
             put("nationality", user.nationality)
+            put("gov_source_id", user.gov_source_id)
+            put("government_id", user.government_id)
             put("gender", user.gender)
             put("password", user.password)
         }

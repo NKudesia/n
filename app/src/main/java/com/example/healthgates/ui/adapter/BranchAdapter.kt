@@ -35,6 +35,10 @@ class BranchAdapter(private val listener: BranchInterface) : RecyclerView.Adapte
                 listener.onViewClick(currentItem, 1)
             }
 
+            locationBtn.setOnClickListener(){
+                listener.onViewClick(currentItem, 2)
+            }
+
             ivMaps.setOnClickListener(){
                 listener.onViewClick(currentItem, 2)
             }

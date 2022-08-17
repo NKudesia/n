@@ -100,7 +100,7 @@
         style="@style/MaterialButton1"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginStart="@dimen/_15sdp"
         android:text="@string/book"
         android:textColor="@color/text_color4"
@@ -127,6 +127,24 @@
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintEnd_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/book_btn"
+        tools:ignore="SpUsage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/location_btn"
+        style="@style/MaterialButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:text="@string/location"
+        android:textColor="@color/text_color4"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="normal"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/call_btn"
         tools:ignore="SpUsage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

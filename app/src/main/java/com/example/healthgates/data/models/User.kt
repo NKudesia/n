@@ -9,5 +9,7 @@ data class User(
         var weight: String = "",
         var date_of_birth: String = "",
         var password: String = "",
-        var nationality : String = ""
+        var nationality : String = "",
+        var gov_source_id : String = "",
+        var government_id : String = ""
 )

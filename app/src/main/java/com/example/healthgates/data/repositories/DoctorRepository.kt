@@ -4,6 +4,7 @@ import android.util.Log
 import com.android.volley.Response
 import com.android.volley.request.JsonObjectRequest
 import com.example.healthgates.data.config.AppConfig
+import com.example.healthgates.data.models.UserDetails
 import com.example.healthgates.singleton.MyApplication
 import com.example.healthgates.singleton.VolleySingleton
 import com.example.healthgates.ui.interfaces.ApiListener
@@ -191,7 +192,7 @@ class DoctorRepository {
 //        with(contextObject) {
 //            put("lang", "en_US")
 //            put("tz", "Asia/Riyadh")
-//            put("uid", userId)
+//            put("uid", 2)
 //        }
 
         val paramsObject = JSONObject()
@@ -199,6 +200,7 @@ class DoctorRepository {
             put("physician_id", doctorId)
             put("slot_date", date)
             put("limit", 1)
+//            put("context", contextObject)
         }
 
         val jsonObject = JSONObject()

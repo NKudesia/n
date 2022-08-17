@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">بوابات الصحة</string>
     /// Alert Dialog
-    <string name="available">متوفرة</string>
     <string name="exit_app">تسجيل الخروج?</string>
     <string name="exit_app_body">هل تريد فغلا تسجيل الخروج?</string>
     <string name="cancel">الغاء</string>
@@ -15,6 +14,8 @@
     <string name="name">الاسم</string>
     <string name="mobile">الجوال</string>
     <string name="nationality">الجنسية</string>
+    <string name="govt_source_id">نوع الوثيقة</string>
+    <string name="govt_id">رقم الوثيقة</string>
     <string name="male">ذكر</string>
     <string name="female">انثى</string>
     <string name="submit">ارسال</string>
@@ -25,6 +26,7 @@
     <string name="doctor">دكتور</string>
     <string name="book">احجز موعد</string>
     <string name="call">اتصال</string>
+    <string name="location">الموقع</string>
     <string name="video_call_appoinment">موعد اونلاين</string>
     <string name="more_details">مزيد من التفاصيل</string>
     <string name="view_your_profile">ملفي</string>
@@ -34,7 +36,7 @@
     <string name="invalid_email">ايميل غير معتمد</string>
     <string name="code_arabic">مركز امتيار للرعاية بالقاديسية</string>
     <string name="reset_complimentery">شكرا لك و الرجاء الرجوع الى الايميل الخاص بكم للتفاصيل</string>
-    <string name="signup_complimentery_msg">شكرا لإنضمامكم الى بوابات الصحة الطبية</string>
+    <string name="signup_complimentery_msg">شكرا لانضمامكن الى بوابات الصحة الطبية</string>
     <string name="reset_link_complimentery">الرجاء لرجوع الى الايميل الخاص بكم لتفعيل كلمة المرور الجديدة</string>
     <string name="home_quotes">هدفكم اليوم هو المحافظة على الابتسامة و التفاؤول بيوم جديد</string>
     <string name="signup_failed_msg">الايميل او الجوال المدخل مسجل لدينا مسبقا الرجاء الاتصال بالدعم للمساعدة</string>
@@ -102,7 +104,7 @@
     //Popup
     <string name="allow">Allow</string>
     <string name="deny">Deny</string>
-    <string name="dont_have_any_records">لا يوجد سجلات!</string>
 
+    <string name="dont_have_any_records">عفوا لكن ليس لديك اي سجلات بعد</string>
 </resources>
 
