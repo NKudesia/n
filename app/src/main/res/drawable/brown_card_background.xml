@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/brown_card_background_color" />
+    <corners android:topLeftRadius="@dimen/_15sdp"
+        android:topRightRadius="@dimen/_15sdp"
+        android:bottomLeftRadius="@dimen/_15sdp"
+        android:bottomRightRadius="@dimen/_15sdp"/>
+</shape>

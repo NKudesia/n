@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradieent_bg"
+    tools:context=".ui.activity.MainActivity">
+
+    <!--    android:layout_marginBottom%3D%22@dimen/_60sdp-->
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_main"
+        tools:ignore="FragmentTagUsage" />
+<!--    <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--        android:id="@+id/bottomAppBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:backgroundTint="@android:color/transparent">-->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bottom_nav_bar"
+            app:itemIconSize="@dimen/_45sdp"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu" />
+<!--    </com.google.android.material.bottomappbar.BottomAppBar>-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/btn_appointment"-->
+<!--        android:layout_width="@dimen/_50sdp"-->
+<!--        android:layout_height="@dimen/_50sdp"-->
+<!--        android:layout_marginEnd="@dimen/_20sdp"-->
+<!--        android:layout_marginBottom="@dimen/_80sdp"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:background="@drawable/ic_plus_button"-->
+<!--        />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

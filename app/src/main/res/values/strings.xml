@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">HealthGates</string>
+    /// Alert Dialog
+    <string name="available">Available</string>
+    <string name="exit_app">Exit the app?</string>
+    <string name="exit_app_body">Are you sure you want to exit the app?</string>
+    <string name="cancel">Cancel</string>
+    <string name="exit">Exit</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="language">عربي</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="nationality">   Nationality</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="submit">Submit</string>
+    <string name="ok">Ok</string>
+    <string name="send">Send</string>
+    <string name="home">Home</string>
+    <string name="hospital">Hospital</string>
+    <string name="doctor">Doctor</string>
+    <string name="book">Book</string>
+    <string name="call">Call</string>
+    <string name="video_call_appoinment">Video call appoinment</string>
+    <string name="more_details">More details</string>
+    <string name="view_your_profile">View your profile</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="ai_quedth">Al Qedeseya Riyadh</string>
+    <string name="code">PCCE1</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="code_arabic">مركز امتيار للرعاية بالقاديسية</string>
+    <string name="reset_complimentery">Thank You for Kindly check your Email for the Reset Link</string>
+    <string name="signup_complimentery_msg">Thank you for joining the medical health portals</string>
+    <string name="reset_link_complimentery">Thank You for submitting to Health gates</string>
+    <string name="home_quotes">Your target for today is to keep positive mindset and smile to everyone you meet.</string>
+    <string name="signup_failed_msg">Sorry Your Mobile/Email is already exists kindly call your support to help you</string>
+    <string name="account_doesnt_exist">Account doesn\'t exist! Maybe wrong email/mobile or password!</string>
+    <string name="i_agree_to">&#160;I agree to &#160;</string>
+    <string name="terms_and_conditions"><u>Terms And Conditions</u> </string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="please_accept_terms"><u>Please accept terms and privacy policy</u></string>
+    <string name="and"> &amp; </string>
+
+    <!--    Home Adapter names-->
+
+    <string name="appointments">Appointments</string>
+    <string name="past_appoinments">Past Appoinments</string>
+    <string name="book_appoinments">Book Appoinments</string>
+    <string name="my_invoices">My Invoices</string>
+    <string name="my_prescriptions">My Prescriptions</string>
+    <string name="lab_test_results">Lab test results</string>
+    <string name="booked_appoinments">Booked Appoinments</string>
+    <string name="rad_results">RAD Results</string>
+    <string name="latest_news">Latest News</string>
+
+<!--    End of home adapter names-->
+
+    <string name="choose_date">Choose Date</string>
+    <string name="choose_time">Choose Time</string>
+    <string name="next">Next</string>
+
+    //Profile
+    <string name="file" formatted="false">File: %1$s</string>
+    <string name="id" formatted="false">ID: %1$s</string>
+    <string name="insurance" formatted="false">Insurance: %1$s</string>
+    <string name="logout" formatted="false">Logout</string>
+    <string name="your_bmi" formatted="false">Your BMI is %1$s</string>
+    <string name="mobile_two" formatted="false">Mobile: %1$s</string>
+    <string name="email_two" formatted="false">Email: %1$s</string>
+    <string name="language_preferred" formatted="false">Language Preferred:</string>
+    <string name="insurance_two" formatted="false">Insurance: %1$s</string>
+    <string name="class_two" formatted="false">Class: %1$s</string>
+    <string name="policy_no" formatted="false">Policy Number: %1$s</string>
+    <string name="expiry" formatted="false">Expiry: %1$s</string>
+    <string name="cm_height">cm Height</string>
+    <string name="kg_weight">kg Weight</string>
+    <string name="blood_type">Blood Type</string>
+
+    /// Doctors Screen
+    <string name="select_speciality">Select Speciality</string>
+    <string name="specialist" formatted="false">%1$s - Specialist</string>
+
+    //Appointment Details Screen
+    <string name="vital_signs">Vital Signs</string>
+    <string name="temprature">Temprature</string>
+    <string name="weight">Weight</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="systolic">Systolic</string>
+    <string name="distolic">Distolic</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="diagnosis">Diagnosis</string>
+    <string name="lab_tests">Lab Tests</string>
+    <string name="lab_results">Lab Results</string>
+    <string name="prescriptions">Prescriptions</string>
+    <string name="rad_tests">RAD Tests</string>
+    <string name="online">ONLINE</string>
+
+    //Popup
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+    <string name="dont_have_any_records">No Record Found!</string>
+
+</resources>
+
+

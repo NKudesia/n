@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.VideoChatFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/remote_video_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/remoteBackground"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/healthgates_logo1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/local_video_container"
+        android:layout_width="@dimen/local_preview_width"
+        android:layout_height="@dimen/local_preview_height"
+        android:layout_marginTop="@dimen/local_preview_margin_top"
+        android:layout_marginEnd="@dimen/local_preview_margin_right"
+        android:background="@color/localBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/local_back_icon_size"
+            android:layout_height="@dimen/local_back_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/healthgates_logo1" />
+
+    </FrameLayout>
+
+
+    <ImageButton
+        android:id="@+id/btn_mute"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginEnd="@dimen/_64sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/circle_shape"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_mic_on"
+        app:tint="@color/colorPrimary" />
+
+    <ImageButton
+        android:id="@+id/end_call_btn"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginStart="@dimen/_64sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/circle_shape"
+        android:backgroundTint="@color/red"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_call_end" />
+
+    <ImageButton
+        android:id="@+id/switch_camera_btn"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginStart="@dimen/_64sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/circle_shape"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_switch_camera"
+        app:tint="@color/colorPrimary" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        app:constraint_referenced_ids="btn_mute,end_call_btn,switch_camera_btn"
+        app:flow_horizontalStyle="spread"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
