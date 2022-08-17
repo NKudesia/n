@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.healthgates.ui.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.healthgates.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_resetLinkFragment"
+            app:destination="@id/resetLinkFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+        <fragment
+            android:id="@+id/signUpFragment"
+            android:name="com.example.healthgates.ui.fragments.SignUpFragment"
+            android:label="fragment_signup"
+            tools:layout="@layout/fragment_signup">
+            <action
+                android:id="@+id/action_signUpFragment_to_signUpComplimentryFragment"
+                app:destination="@id/signUpComplimenteryFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+
+            <action
+                android:id="@+id/action_signUpFragment_to_signUpFailedFragment"
+                app:destination="@id/signUpFailedFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        </fragment>
+
+
+    <fragment
+        android:id="@+id/signUpComplimenteryFragment"
+        android:name="com.example.healthgates.ui.fragments.SignUpComplimenteryFragment"
+        android:label="fragment_signup_complimentery"
+        tools:layout="@layout/fragment_signup_complimentery">
+        <action
+            android:id="@+id/action_signUpComplimenteryFragment_to_signUpFailedFragment"
+            app:destination="@id/signUpFailedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/signUpFailedFragment"
+        android:name="com.example.healthgates.ui.fragments.SignUpFailedFragment"
+        android:label="fragment_signup_complimentery"
+        tools:layout="@layout/fragment_signup_failed">
+        <action
+            android:id="@+id/action_signUpFailedFragment_to_resetLinkFragment"
+            app:destination="@id/resetLinkFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_signUpFailedFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetLinkFragment"
+        android:name="com.example.healthgates.ui.fragments.ResetLinkFragment"
+        android:label="fragment_reset_link"
+        tools:layout="@layout/fragment_reset_link">
+        <action
+            android:id="@+id/action_resetLinkFragment_to_resetComplimenteryFragment"
+            app:destination="@id/resetComplimenteryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetComplimenteryFragment"
+        android:name="com.example.healthgates.ui.fragments.ResetComplimenteryFragment"
+        android:label="fragment_reset_complimentery"
+        tools:layout="@layout/fragment_reset_complimentery">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.healthgates.ui.fragments.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_bookAppointmentDateFragment"
+            app:destination="@id/bookAppointmentDateFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_appointmentsFragment"
+            app:destination="@id/appointmentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+        <action
+            android:id="@+id/action_homeFragment_to_prescriptionsFragment"
+            app:destination="@id/prescriptionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_labTestsFragment"
+            app:destination="@id/labTestsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+        <action
+            android:id="@+id/action_homeFragment_to_radResultsFragment"
+            app:destination="@id/radResultsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/branchesFragment"
+        android:name="com.example.healthgates.ui.fragments.BranchesFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_branches">
+
+        <action
+            android:id="@+id/action_branchesFragment_to_viewDoctorsFragment"
+            app:destination="@id/viewDoctorsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_branchesFragment_to_mapFragment"
+            app:destination="@id/mapFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.example.healthgates.ui.fragments.DoctorFragment"
+        android:label="@string/doctor"
+        tools:layout="@layout/fragment_doctor">
+        <action
+            android:id="@+id/action_doctorFragment_to_bookAppointmentDateFragment"
+            app:destination="@id/bookAppointmentDateFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_doctorFragment_to_videoChatFragment"
+            app:destination="@id/videoChatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/bookAppointmentDateFragment"
+        android:name="com.example.healthgates.ui.fragments.BookAppointmentDateFragment"
+        tools:layout="@layout/fragment_book_appointment_date">
+        <action
+            android:id="@+id/action_bookAppointmentDateFragment_to_bookAppointmentTimeFragment"
+            app:destination="@id/bookAppointmentTimeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookAppointmentTimeFragment"
+        android:name="com.example.healthgates.ui.fragments.BookAppointmentTimeFragment"
+        tools:layout="@layout/fragment_book_appointment_date">
+        <action
+            android:id="@+id/action_bookAppointmentTimeFragment_to_bookingConfirmationFragment"
+            app:destination="@id/bookingConfirmationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingConfirmationFragment"
+        android:name="com.example.healthgates.ui.fragments.BookingConfirmationFragment"
+        tools:layout="@layout/fragment_signup_complimentery">
+        <action
+            android:id="@+id/action_bookingConfirmationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/navigation_main"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.healthgates.ui.fragments.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/navigation_main"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewDoctorsFragment"
+        android:name="com.example.healthgates.ui.fragments.ViewDoctorsFragment"
+        tools:layout="@layout/fragment_view_doctors">
+        <action
+            android:id="@+id/action_viewDoctrosFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_viewDoctrosFragment_to_bookAppointmentDateFragment"
+            app:destination="@id/bookAppointmentDateFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.example.healthgates.ui.fragments.AppointmentsFragment"
+        tools:layout="@layout/fragment_appointments">
+        <action
+            android:id="@+id/action_appointmentsFragment_to_appointmentDetailsFragment"
+            app:destination="@id/appointmentDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/appointmentDetailsFragment"
+        android:name="com.example.healthgates.ui.fragments.AppointmentDetailsFragment"
+        tools:layout="@layout/fragment_appointment_details">
+        <action
+            android:id="@+id/action_appointmentDetailsFragment_to_labTestsFragment"
+            app:destination="@id/labTestsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_appointmentDetailsFragment_to_videoChatFragment"
+            app:destination="@id/videoChatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/prescriptionsFragment"
+        android:name="com.example.healthgates.ui.fragments.PrescriptionsFragment"
+        tools:layout="@layout/fragment_prescriptions">
+    </fragment>
+
+    <fragment
+        android:id="@+id/labTestsFragment"
+        android:name="com.example.healthgates.ui.fragments.LabTestsFragment"
+        tools:layout="@layout/fragment_lab_tests">
+    </fragment>
+
+    <fragment
+        android:id="@+id/radResultsFragment"
+        android:name="com.example.healthgates.ui.fragments.RadResultsFragment"
+        tools:layout="@layout/fragment_rad_results">
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.healthgates.ui.fragments.MapFragment"
+        tools:layout="@layout/fragment_map">
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/videoChatFragment"
+        android:name="com.example.healthgates.ui.fragments.VideoChatFragment"
+        tools:layout="@layout/fragment_video_chat">
+    </fragment>
+
+</navigation>

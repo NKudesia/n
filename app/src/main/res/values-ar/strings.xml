@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">بوابات الصحة</string>
+    /// Alert Dialog
+    <string name="exit_app">تسجيل الخروج?</string>
+    <string name="exit_app_body">هل تريد فغلا تسجيل الخروج?</string>
+    <string name="cancel">الغاء</string>
+    <string name="exit">خروج</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="sign_up">تسجيل جديد</string>
+    <string name="forgot_password">استرجاع كلمة المرور</string>
+    <string name="language">English</string>
+    <string name="name">الاسم</string>
+    <string name="mobile">الجوال</string>
+    <string name="nationality">الجنسية</string>
+    <string name="govt_source_id">نوع الوثيقة</string>
+    <string name="govt_id">رقم الوثيقة</string>
+    <string name="male">ذكر</string>
+    <string name="female">انثى</string>
+    <string name="submit">ارسال</string>
+    <string name="ok">تم</string>
+    <string name="send">ارسال</string>
+    <string name="home">الرئيسية</string>
+    <string name="hospital">مستشفى</string>
+    <string name="doctor">دكتور</string>
+    <string name="book">احجز موعد</string>
+    <string name="call">اتصال</string>
+    <string name="location">الموقع</string>
+    <string name="video_call_appoinment">موعد اونلاين</string>
+    <string name="more_details">مزيد من التفاصيل</string>
+    <string name="view_your_profile">ملفي</string>
+    <string name="good_morning">صباح الخير</string>
+    <string name="ai_quedth">القادسية الرياض</string>
+    <string name="code">PCCE1</string>
+    <string name="invalid_email">ايميل غير معتمد</string>
+    <string name="code_arabic">مركز امتيار للرعاية بالقاديسية</string>
+    <string name="reset_complimentery">شكرا لك و الرجاء الرجوع الى الايميل الخاص بكم للتفاصيل</string>
+    <string name="signup_complimentery_msg">شكرا لانضمامكن الى بوابات الصحة الطبية</string>
+    <string name="reset_link_complimentery">الرجاء لرجوع الى الايميل الخاص بكم لتفعيل كلمة المرور الجديدة</string>
+    <string name="home_quotes">هدفكم اليوم هو المحافظة على الابتسامة و التفاؤول بيوم جديد</string>
+    <string name="signup_failed_msg">الايميل او الجوال المدخل مسجل لدينا مسبقا الرجاء الاتصال بالدعم للمساعدة</string>
+    <string name="account_doesnt_exist">لحساب غير موجود
+الرجاء التاكد من الحساب او كلمة المرور</string>
+    <string name="i_agree_to">&#160; موافقة &#160;</string>
+    <string name="terms_and_conditions"> <u>الشروط</u></string>
+    <string name="privacy_policy"><u>سياسة الخصوصية</u></string>
+    <string name="please_accept_terms"><u>الرجاء الموافقة على سياسة الخصوصية</u></string>
+    <string name="and"> و </string>
+    <!--    Home Adapter names-->
+
+    <string name="appointments">المواعيد</string>
+    <string name="past_appoinments">المواعيد السابقة</string>
+    <string name="book_appoinments">احجز موعد</string>
+    <string name="my_invoices">الفواتير</string>
+    <string name="my_prescriptions">الوصفات الطبية</string>
+    <string name="lab_test_results">نتائج المختبر</string>
+    <string name="booked_appoinments">المواعيد المسجلة</string>
+    <string name="rad_results">تقارير الاشعة</string>
+    <string name="latest_news">اخر الاخبار</string>
+
+    <!--    End of home adapter names-->
+
+    <string name="choose_date">اختار تاريخ</string>
+    <string name="choose_time">اختيار الوقت</string>
+    <string name="next">التالي</string>
+
+    //Profile
+    <string name="file" formatted="false">%1$s:رقم</string>
+    <string name="id" formatted="false">الرقم: %1$s</string>
+    <string name="insurance" formatted="false">التأمين الصحي: %1$s</string>
+    <string name="logout" formatted="false">خروج</string>
+    <string name="your_bmi" formatted="false">معدل كتلة الجسم %1$s</string>
+    <string name="mobile_two" formatted="false">الجوال: %1$s</string>
+    <string name="email_two" formatted="false">البريد الالكتروني: %1$s</string>
+    <string name="language_preferred" formatted="false">اللغة المفضلة:</string>
+    <string name="insurance_two" formatted="false">التأمين: %1$s</string>
+    <string name="class_two" formatted="false">الدرجة: %1$s</string>
+    <string name="policy_no" formatted="false">رقم البوليصة: %1$s</string>
+    <string name="expiry" formatted="false">الانتهاء: %1$s</string>
+    <string name="cm_height">الطول سم</string>
+    <string name="kg_weight">الوزن كغ</string>
+    <string name="blood_type">زمرة الدم</string>
+
+    /// Doctors Screen
+    <string name="select_speciality">اختيار الاختصاص</string>
+    <string name="specialist" formatted="false">%1$s - الاختصاص</string>
+
+    //Appointment Details Screen
+    <string name="vital_signs">المؤشرات الحيوية</string>
+    <string name="temprature">الحرارة</string>
+    <string name="weight">الوزن</string>
+    <string name="blood_pressure">ضغط الدم</string>
+    <string name="systolic">Systolic</string>
+    <string name="distolic">Distolic</string>
+    <string name="heart_rate">نبضات القلب</string>
+    <string name="diagnosis">التشخيص</string>
+    <string name="lab_tests">الفحوصات</string>
+    <string name="lab_results">نتائج المختبر</string>
+    <string name="prescriptions">الوصفات</string>
+    <string name="rad_tests">RAD Tests</string>
+    <string name="online">اونلاين</string>
+
+    //Popup
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+
+    <string name="dont_have_any_records">عفوا لكن ليس لديك اي سجلات بعد</string>
+</resources>
+

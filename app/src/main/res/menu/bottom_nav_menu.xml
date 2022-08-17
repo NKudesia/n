@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/branchesFragment"
+        android:icon="@drawable/nav_left"
+        android:title="" />
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/nav_center"
+        android:title=""/>
+
+
+    <item
+        android:id="@+id/call"
+        android:icon="@drawable/healthgate_phone_btn"
+        android:title="" />
+
+
+
+</menu>
